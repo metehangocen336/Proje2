@@ -59,4 +59,4 @@ class Hasta():
         tedavi_süresi= mevcut_hastalik_tedavi_süre + uygulanacak_tedavi_süre
         return tedavi_süresi
     def __str__(self):
-        return f"ad {self.__ad}, soyad {self.__soyad}, dogum tarihi {self.__dogumTarihi}, hastalik {self.__hastalik}, tedavi {self.__tedavi}"
+        return f"hasta no:{self.__hastaNo} ad {self.__ad}, soyad {self.__soyad}, dogum tarihi {self.__dogumTarihi}, hastalik {self.__hastalik}, tedavi {self.__tedavi}"
