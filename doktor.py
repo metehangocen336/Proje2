@@ -25,4 +25,4 @@ class Doktor(personel.Personel):
         return arttirilmis_maas
     def __str__(self):
         # önce diğer sınıflardan gelen bilgiler sonra doktor sınıfından gelen bilgiler
-        return f"{super().__str__()}, uzmanlık: {self.__uzmanlik}, deneyim yılı: {self.__deneyim_yili}, hastane: {self.__hastane}"
+        return f"{super().__str__()}, uzmanlık: {self.__uzmanlik}, deneyim yılı: {self.__deneyim_yili}, hastane: {self.__hastane}, arttirilmis maas={self.maas_arttir()}"

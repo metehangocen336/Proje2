@@ -24,4 +24,4 @@ class Hemsire(personel.Personel):
         arttirilmis_maas= maas +(self.__calisma_saati *20) # maas artisi calısma saatinin 20 katı kadar
         return arttirilmis_maas
     def __str__(self):
-        return f"{super().__str__()}, calisma saati={self.__calisma_saati},sertifika={self.__sertifika},hastane={self.__hastane}"
+        return f"{super().__str__()}, calisma saati={self.__calisma_saati},sertifika={self.__sertifika},hastane={self.__hastane}, arttirilmis maas={self.maas_arttir()}"
