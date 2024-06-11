@@ -48,7 +48,7 @@ class Hasta():
         mevcut_hastalik=self.get_hastalik()
         mevcut_hastalik_tedavi_süre=""
         uygulanacak_tedavi_süre=""
-        tedaviler={"özel":2,"normal":4}
+        tedaviler={"özel":2,"normal":4} # özel tedavide 2 gün uzuyor normal tedavide 4 gün
         mevcut_tedavi=self.get_tedavi()
         for x in hastaliklar.keys():
             if mevcut_hastalik==x:
