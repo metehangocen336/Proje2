@@ -23,5 +23,11 @@ class Hemsire(personel.Personel):
         maas= self.get_maas()
         arttirilmis_maas= maas +(self.__calisma_saati *20) # maas artisi calısma saatinin 20 katı kadar
         return arttirilmis_maas
+    def sorumlu_hastalar(self):
+        from main import hemsirenin_hastalar # hastalar döngüsel hata olmaması icin yerel olark olusturuldu
+        for hasta in hemsirenin_hastalar.keys():
+            if hemsirenin_hastalar[hasta]==0:  #hastanin valuesu 0 olarak atandi burada 1 arttırılıyor eger 1 artarsa hastaya hemsire denk geliyor ve birdaha yeni bir hemsire ile eslesmiyor
+                hemsirenin_hastalar[hasta]+=1
+                return hasta
     def __str__(self):
-        return f"{super().__str__()}, calisma saati={self.__calisma_saati},sertifika={self.__sertifika},hastane={self.__hastane}, arttirilmis maas={self.maas_arttir()}"
+        return f"{super().__str__()}, calisma saati={self.__calisma_saati},sertifika={self.__sertifika},hastane={self.__hastane}, arttirilmis maas={self.maas_arttir()}, sorumlu oldugu hasta:{self.sorumlu_hastalar()}"
